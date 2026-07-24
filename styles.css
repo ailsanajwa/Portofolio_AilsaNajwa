@@ -35,7 +35,7 @@ body.loading { overflow: hidden; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('src/assets/images/projects/Sudoku-Adventure.png');
+  background-image: url('src/assets/images/loadingscreen/loadingscreen.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -66,28 +66,63 @@ body.loading { overflow: hidden; }
   padding: 2rem 1rem;
 }
 
-.loader-logo {
-  width: 140px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+.loader-brand {
+  width: 110px;
+  height: 110px;
+  display: grid;
+  place-items: center;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+  text-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 .loader-sub {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.28em;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
 }
 
 .loader-title {
   color: #fff;
-  font-size: clamp(2rem, 5.6vw, 4rem);
+  font-size: clamp(2rem, 5.2vw, 4rem);
   margin: 0;
   font-weight: 800;
   text-transform: uppercase;
-  line-height: 0.95;
-  text-shadow: 0 8px 26px rgba(3,3,3,0.6);
+  line-height: 1.05;
+  text-shadow: 0 10px 34px rgba(0,0,0,0.55);
+}
+
+.loader-title span {
+  display: block;
+  margin-top: 0.3rem;
+  letter-spacing: 0.2em;
+  font-size: 0.95em;
+}
+
+.loader-tagline,
+.loader-services {
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.loader-services {
+  letter-spacing: 0.12em;
+  margin-top: 0.2rem;
+}
+
+.loader-divider {
+  width: clamp(220px, 40vw, 480px);
+  height: 1px;
+  margin: 1.2rem auto 0.8rem;
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.6), rgba(255,255,255,0.12));
 }
 
 .loader-progress {
@@ -109,8 +144,10 @@ body.loading { overflow: hidden; }
 }
 
 .loader-caption {
-  color: rgba(255,255,255,0.9);
-  margin-top: 0.85rem;
+  color: rgba(255,255,255,0.92);
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
 }
 
 body::before,
