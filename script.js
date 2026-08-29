@@ -9,25 +9,100 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// 1. Initial Loading Screen Animation
+// 1. Initial Loading Screen — Typewriter Animation
 document.addEventListener('DOMContentLoaded', () => {
   const loaderScreen = document.getElementById('loaderScreen');
-  const loaderFill = document.getElementById('loaderFill');
+  const loaderFill   = document.getElementById('loaderFill');
+  const loaderSub    = document.getElementById('loaderSub');
+  const loaderName   = document.getElementById('loaderName');
+  const loaderName2  = document.getElementById('loaderName2');
+  const loaderCursor = document.getElementById('loaderCursor');
+  const loaderTagline  = document.getElementById('loaderTagline');
+  const loaderServices = document.getElementById('loaderServices');
+  const loaderDivider  = document.getElementById('loaderDivider');
+  const loaderCaption  = document.getElementById('loaderCaption');
 
-  if (loaderScreen && loaderFill) {
-    loaderFill.style.width = '12%';
-    setTimeout(() => {
-      loaderFill.style.width = '100%';
-    }, 100);
+  if (!loaderScreen || !loaderFill) return;
 
-    setTimeout(() => {
-      document.body.classList.remove('loading');
-      loaderScreen.classList.add('is-hidden');
-      setTimeout(() => {
-        loaderScreen.style.display = 'none';
-      }, 800);
-    }, 1500);
+  // Helper: type text into an element char by char
+  function typeText(el, text, speed = 60) {
+    return new Promise((resolve) => {
+      let i = 0;
+      const interval = setInterval(() => {
+        el.textContent += text[i];
+        i++;
+        if (i >= text.length) {
+          clearInterval(interval);
+          resolve();
+        }
+      }, speed);
+    });
   }
+
+  // Helper: fade in an element
+  function fadeIn(el, duration = 500) {
+    return new Promise((resolve) => {
+      el.style.transition = `opacity ${duration}ms ease`;
+      el.style.opacity = '1';
+      setTimeout(resolve, duration);
+    });
+  }
+
+  // Helper: wait ms
+  function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  // Progress bar helpers
+  function setProgress(pct, duration = 400) {
+    if (loaderFill) {
+      loaderFill.style.transition = `width ${duration}ms cubic-bezier(0.16, 1, 0.3, 1)`;
+      loaderFill.style.width = pct + '%';
+    }
+  }
+
+  async function runLoader() {
+    // Step 1 — type sub-label
+    setProgress(8, 300);
+    await wait(300);
+    await typeText(loaderSub, 'WELCOME TO THE PORTFOLIO OF', 42);
+
+    // Step 2 — type first name
+    await wait(200);
+    setProgress(35, 600);
+    await typeText(loaderName, 'AILSA NAJWA', 75);
+
+    // Step 3 — pause, then show second name
+    await wait(350);
+    loaderName2.style.display = 'block';
+    setProgress(58, 500);
+    await wait(300);
+
+    // Step 4 — hide cursor, fade in tagline
+    loaderCursor.style.display = 'none';
+    setProgress(72, 400);
+    await fadeIn(loaderTagline, 500);
+
+    // Step 5 — fade in services line
+    await wait(150);
+    setProgress(84, 400);
+    await fadeIn(loaderServices, 500);
+
+    // Step 6 — fade in divider + caption
+    await wait(150);
+    await Promise.all([fadeIn(loaderDivider, 450), fadeIn(loaderCaption, 450)]);
+
+    // Step 7 — finish progress bar
+    setProgress(100, 600);
+    await wait(700);
+
+    // Step 8 — dismiss loader
+    document.body.classList.remove('loading');
+    loaderScreen.classList.add('is-hidden');
+    setTimeout(() => { loaderScreen.style.display = 'none'; }, 800);
+  }
+
+  runLoader();
 });
 
 // 2. Sticky Navigation Header On Scroll
