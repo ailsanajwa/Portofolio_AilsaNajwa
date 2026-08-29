@@ -1,253 +1,1086 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#07111f" />
-    <title>Portofolio Caca</title>
+    <meta name="theme-color" content="#2b0a18" />
+    <title>Ailsa Najwa Insyira Putri — Portfolio</title>
     <meta
       name="description"
-      content="Portofolio web profesional yang lengkap untuk showcase karya, pengalaman, layanan, dan kontak."
+      content="Official portfolio of Ailsa Najwa Insyira Putri — Informatics Engineering student, AI enthusiast, Frontend & Web Developer, and UI/UX Designer."
     />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
+    />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="loading">
+    <!-- Initial Loading Screen -->
     <div class="loader-screen" id="loaderScreen">
       <div class="loader-inner">
-        <img class="loader-brand" src="src/assets/images/loadingscreen/logo.png" alt="AN logo" />
-        <p class="loader-sub">WELCOME TO</p>
+        <div class="loader-brand-wrapper">
+          <img class="loader-brand" src="src/assets/images/loadingscreen/logo.png" alt="Ailsa Najwa Logo" />
+        </div>
+        <p class="loader-sub">WELCOME TO THE PORTFOLIO OF</p>
         <h1 class="loader-title">
           AILSA NAJWA
-          <span>PORTFOLIO</span>
+          <span>INSYIRA PUTRI</span>
         </h1>
-        <p class="loader-tagline">Informatics Engineering Student</p>
-        <p class="loader-services">AI • Machine Learning • Web Development</p>
+        <p class="loader-tagline">Informatics Engineering Student • Universitas Dian Nuswantoro</p>
+        <p class="loader-services">AI • Machine Learning • Web Development • UI/UX Design</p>
         <div class="loader-divider"></div>
-        <p class="loader-caption">Crafting your experience...</p>
+        <p class="loader-caption">Crafting an engaging digital experience...</p>
         <div class="loader-progress">
           <div class="loader-progress-fill" id="loaderFill"></div>
         </div>
       </div>
     </div>
 
-    <header class="site-header">
+    <!-- Background Ambient Glow Orbs -->
+    <div class="glow-orb glow-orb-1" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-2" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-3" aria-hidden="true"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="siteHeader">
       <nav class="container nav-bar">
-        <a href="#home" class="brand">Ailsa Najwa Insyira Putri<span>.</span></a>
-        <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#services">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#experience">Education</a>
-          <a href="#contact">Contact</a>
+        <a href="#home" class="brand">
+          <span class="brand-name">Ailsa Najwa</span><span class="brand-dot">.</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links" id="navLinks">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#organizations" class="nav-link">Organizations</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#contact" class="nav-btn-contact">Contact</a>
         </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars" id="toggleIcon"></i>
+        </button>
       </nav>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#experience" class="mobile-link">Experience</a>
+        <a href="#organizations" class="mobile-link">Organizations</a>
+        <a href="#certifications" class="mobile-link">Certifications</a>
+        <a href="#contact" class="mobile-link mobile-link-contact">Contact Me</a>
+      </div>
     </header>
 
     <main id="home">
+      <!-- HERO SECTION -->
       <section class="hero" data-reveal>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="hero-badge">PORTOFOLIO</div>
-            <p class="eyebrow">UI/UX Designer • Frontend Developer • Web Developer • AI Enthusiast</p>
-            <h1>Ailsa Najwa Insyira Putri</h1>
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Available for Collaboration & Tech Roles</span>
+            </div>
+            
+            <p class="eyebrow">UI/UX Designer • Frontend Developer • AI Enthusiast</p>
+            
+            <h1 class="hero-name">
+              Ailsa Najwa <span class="gradient-text">Insyira Putri</span>
+            </h1>
+            
+            <p class="hero-location">
+              <i class="fa-solid fa-location-dot"></i> Semarang City, Central Java, Indonesia (50117)
+            </p>
+
             <p class="hero-text">
-                 I’m Ailsa Najwa Insyira Putri, an Informatics Engineering student at Universitas Dian Nuswantoro with strong 
-                interests in information technology, artificial intelligence, administration, and organizational management. 
-                Experienced in public communication, administration, teamwork, and event coordination through both 
-                organizational and professional activities. I am a fast learner, adaptable, disciplined, and capable of working 
-                effectively both independently and collaboratively in a team environment. 
+              I’m an <strong>Informatics Engineering student at Universitas Dian Nuswantoro</strong> with strong 
+              interests in information technology, artificial intelligence, administration, and organizational management. 
+              Experienced in public communication, administration, teamwork, and event coordination through both 
+              organizational and professional activities. A fast learner, adaptable, disciplined, and capable of working 
+              effectively both independently and collaboratively.
             </p>
+
             <div class="hero-actions">
-              <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
-              <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Projects</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Get in Touch</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ailsanajwa24" target="_blank" rel="noopener noreferrer" class="btn btn-icon" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:ailsanajwa248@gmail.com" class="btn btn-icon" aria-label="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
             </div>
-            <div class="stats">
-              <div>
-                <strong>4+</strong>
-                <span>Years of Experience</span>
+
+            <!-- Stats Bar -->
+            <div class="stats-bar">
+              <div class="stat-card">
+                <div class="stat-num" data-target="3">3+</div>
+                <div class="stat-label">Years Learning & Leading</div>
               </div>
-              <div>
-                <strong>8+</strong>
-                <span>Projects Completed</span>
+              <div class="stat-card">
+                <div class="stat-num" data-target="8">8+</div>
+                <div class="stat-label">Projects & Initiatives</div>
               </div>
-              <div>
-                <strong>100%</strong>
-                <span>Dedication</span>
+              <div class="stat-card">
+                <div class="stat-num" data-target="600">600+</div>
+                <div class="stat-label">Event Attendees Led</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-target="100">100%</div>
+                <div class="stat-label">Commitment & Passion</div>
               </div>
             </div>
           </div>
 
-          <div class="hero-card" data-reveal>
-            <img src="src/assets/images/profile.jpeg" alt="Foto profil Ailsa" />
-            <div class="hero-card-body">
-              <h3>Let's Build Something Amazing Together</h3>
-              <p>UI/UX • Frontend • Web Developer • AI Enthusiast</p>
+          <!-- Hero Visual Card -->
+          <div class="hero-visual" data-reveal>
+            <div class="avatar-card-wrapper">
+              <div class="avatar-card">
+                <div class="avatar-image-box">
+                  <img src="src/assets/images/profile.jpeg" alt="Ailsa Najwa Insyira Putri" class="avatar-img" />
+                  <div class="avatar-glow"></div>
+                </div>
+                
+                <div class="avatar-info">
+                  <div class="avatar-info-header">
+                    <h3>Ailsa Najwa</h3>
+                    <span class="status-pill">Active Student</span>
+                  </div>
+                  <p class="avatar-subtitle">Informatics Engineering @ UDINUS</p>
+                  
+                  <div class="avatar-tags">
+                    <span class="tag"><i class="fa-solid fa-code"></i> Frontend</span>
+                    <span class="tag"><i class="fa-solid fa-brain"></i> AI & ML</span>
+                    <span class="tag"><i class="fa-solid fa-palette"></i> UI/UX</span>
+                    <span class="tag"><i class="fa-solid fa-microphone"></i> MC & PR</span>
+                  </div>
+                </div>
+
+                <!-- Floating Quick Action Badge -->
+                <div class="floating-badge badge-top-right">
+                  <i class="fa-solid fa-trophy"></i>
+                  <div>
+                    <strong>P2MW Competitor</strong>
+                    <span>National Entrepreneurial</span>
+                  </div>
+                </div>
+
+                <div class="floating-badge badge-bottom-left">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <div>
+                    <strong>GPA 3.33 / 4.00</strong>
+                    <span>UDINUS Computer Science</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section" data-reveal>
-        <div class="container about-grid">
-          <div>
-            <p class="section-label">About Me</p>
-            <h2>Building Digital Solutions with Creativity and Technology.</h2>
-            <p>
-              I am an Informatics Engineering student at Dian Nuswantoro University with a passion for web development, artificial intelligence, and user interface design. 
-              I enjoy transforming ideas into responsive, user-friendly, and impactful digital solutions through continuous learning and hands-on projects.
-            </p>
-            <p>
-              This portfolio is designed as a professional showcase ready for use in CVs, job presentations, and online publishing needs.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3>Short Profile</h3>
-            <ul>
-              <li>Focused on visual design and frontend development</li>
-              <li>Enjoy working on challenging projects</li>
-              <li>Pay attention to detail and performance</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section section-alt" data-reveal>
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section">
         <div class="container">
-          <p class="section-label">Layanan</p>
-          <h2>Yang saya tawarkan untuk membantu ide Anda berkembang.</h2>
-          <div class="service-grid">
-            <article class="card" data-reveal>
-              <h3>Web Development</h3>
-              <p>Membangun situs modern yang responsif dan mudah dikelola.</p>
-            </article>
-            <article class="card" data-reveal>
-              <h3>UI/UX Design</h3>
-              <p>Membuat tampilan yang menarik dan alur interaksi yang intuitif.</p>
-            </article>
-            <article class="card" data-reveal>
-              <h3>Brand & Content</h3>
-              <p>Menyusun identitas visual dan konten yang konsisten untuk produk Anda.</p>
-            </article>
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">PROFILE OVERVIEW</span>
+            <h2>About <span class="gradient-text">Me</span></h2>
+            <p class="section-desc">
+              Bridging technical ingenuity, creative design, and organizational leadership to deliver impactful digital solutions.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card main-about" data-reveal>
+              <div class="about-icon-header">
+                <i class="fa-solid fa-user-astronaut"></i>
+                <h3>Passionate Builder & Communicator</h3>
+              </div>
+              <p>
+                I’m <strong>Ailsa Najwa Insyira Putri</strong>, an Informatics Engineering student at <strong>Universitas Dian Nuswantoro (UDINUS)</strong>, Semarang. My multidisciplinary passion spans across <strong>Artificial Intelligence, Modern Web Development, UI/UX Design, and Organizational Administration</strong>.
+              </p>
+              <p>
+                Whether crafting intuitive web applications with React and Vite, training machine learning models for computer vision, hosting high-profile university events as a Master of Ceremony, or managing administrative operations for faculty-wide student boards, I take pride in delivering excellence with high adaptability and attention to detail.
+              </p>
+
+              <div class="about-meta-grid">
+                <div class="meta-item">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <span class="meta-label">Location</span>
+                    <span class="meta-val">Semarang, Central Java</span>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <div>
+                    <span class="meta-label">Email</span>
+                    <a href="mailto:ailsanajwa248@gmail.com" class="meta-val">ailsanajwa248@gmail.com</a>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <span class="meta-label">Phone / WhatsApp</span>
+                    <a href="tel:+628567549699" class="meta-val">08567549699</a>
+                  </div>
+                </div>
+                <div class="meta-item">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <div>
+                    <span class="meta-label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/ailsanajwa24" target="_blank" rel="noopener noreferrer" class="meta-val">linkedin.com/in/ailsanajwa24</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-highlights-wrapper" data-reveal>
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div>
+                  <h4>Modern Web Development</h4>
+                  <p>Building responsive, user-centric web applications using React.js, Tailwind CSS, Vite, and modern JavaScript standards.</p>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <div>
+                  <h4>AI & Machine Learning</h4>
+                  <p>Certified in IBM AI Engineering & Machine Learning, exploring computer vision diagnostic systems and data analytics.</p>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <div class="highlight-icon">
+                  <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <div>
+                  <h4>Leadership & Public Relations</h4>
+                  <p>Active Secretary at BEM FIK UDINUS, fundraising strategist, and seasoned Master of Ceremony with strong interpersonal skills.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="experience" class="section" data-reveal>
+      <!-- EDUCATION SECTION -->
+      <section id="education" class="section section-alt">
         <div class="container">
-          <p class="section-label">Pengalaman</p>
-          <h2>Jejak perjalanan saya dalam dunia digital.</h2>
-          <div class="timeline">
-            <article class="timeline-item" data-reveal>
-              <span>2024 — Sekarang</span>
-              <h3>Pengembang Web & Desainer UI</h3>
-              <p>Membuat berbagai proyek portofolio, landing page, dan aplikasi antarmuka berbasis kebutuhan pengguna.</p>
-            </article>
-            <article class="timeline-item" data-reveal>
-              <span>2022 — 2024</span>
-              <h3>Belajar dan Berkembang di Bidang Teknologi</h3>
-              <p>Menekuni desain, pengembangan web, dan pemecahan masalah digital melalui eksperimen dan proyek nyata.</p>
-            </article>
-            <article class="timeline-item" data-reveal>
-              <span>2021 — 2022</span>
-              <h3>Fondasi Kreatif & Problem Solving</h3>
-              <p>Memahami dasar visual, komunikasi, dan berpikir sistematis untuk membangun solusi yang lebih baik.</p>
-            </article>
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">ACADEMIC BACKGROUND</span>
+            <h2>Formal <span class="gradient-text">Education</span></h2>
+            <p class="section-desc">Academic excellence, entrepreneurial competitions, and leadership milestones.</p>
+          </div>
+
+          <div class="education-grid">
+            <!-- UDINUS -->
+            <div class="education-card featured-edu" data-reveal>
+              <div class="edu-header">
+                <div class="edu-logo-wrapper">
+                  <i class="fa-solid fa-university"></i>
+                </div>
+                <div class="edu-title-group">
+                  <div class="edu-date-badge">July 2023 — Present</div>
+                  <h3>Universitas Dian Nuswantoro (UDINUS)</h3>
+                  <p class="edu-major">Bachelor of Computer Science / Informatics Engineering</p>
+                </div>
+                <div class="edu-gpa-badge">
+                  <span class="gpa-label">Current GPA</span>
+                  <span class="gpa-val">3.33 / 4.00</span>
+                </div>
+              </div>
+              <div class="edu-body">
+                <h4 class="highlights-heading"><i class="fa-solid fa-star"></i> Key Academic & Leadership Highlights:</h4>
+                <ul class="styled-list">
+                  <li>
+                    <strong>Large-Scale Event Leadership:</strong> Led a team in successfully organizing a large-scale IT seminar for <strong>600+ attendees</strong>, ensuring smooth operations, stage management, and positive participant engagement.
+                  </li>
+                  <li>
+                    <strong>National Entrepreneurship (P2MW):</strong> Competed in the prestigious national-level <strong>P2MW</strong> (Program Pembinaan Mahasiswa Wirausaha) competition, representing Universitas Dian Nuswantoro with innovative business & tech modeling.
+                  </li>
+                  <li>
+                    <strong>Work Ethic & Academic Delivery:</strong> Demonstrated consistent discipline by delivering complex coursework and collaborative engineering projects on time while upholding high quality and performance benchmarks.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- MAN 1 KOTA SEMARANG -->
+            <div class="education-card" data-reveal>
+              <div class="edu-header">
+                <div class="edu-logo-wrapper">
+                  <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="edu-title-group">
+                  <div class="edu-date-badge">July 2021 — May 2023</div>
+                  <h3>MAN 1 Kota Semarang</h3>
+                  <p class="edu-major">Natural Sciences (MIPA / Science Major)</p>
+                </div>
+                <div class="edu-gpa-badge">
+                  <span class="gpa-label">Graduation GPA</span>
+                  <span class="gpa-val">87.79 / 100.00</span>
+                </div>
+              </div>
+              <div class="edu-body">
+                <h4 class="highlights-heading"><i class="fa-solid fa-award"></i> Key Highlights:</h4>
+                <ul class="styled-list">
+                  <li>
+                    <strong>Consistent Academic Excellence:</strong> Maintained an average score consistently above 85.00 across all science, mathematics, and language curricula.
+                  </li>
+                  <li>
+                    <strong>Cultural Project Presentation:</strong> Successfully completed, coordinated, and presented a cultural Wayang Puppet art project to a large audience, sharpening public speaking, creative storytelling, and stage presence.
+                  </li>
+                  <li>
+                    <strong>Personal Development:</strong> Cultivated disciplined time management, collaborative team ethics, and a high sense of personal responsibility.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- SKILLS & TOOLS SECTION -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">CORE CAPABILITIES</span>
+            <h2>Skills & <span class="gradient-text">Technologies</span></h2>
+            <p class="section-desc">A versatile blend of software engineering, creative design tools, and interpersonal leadership.</p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Programming & Web Development -->
+            <div class="skill-category-card" data-reveal>
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon"><i class="fa-solid fa-code"></i></div>
+                <h3>Programming & Web Tech</h3>
+              </div>
+              <p class="skill-cat-desc">Languages, libraries, and frameworks for frontend and software development.</p>
+              <div class="skill-pills">
+                <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</span>
+                <span class="skill-pill"><i class="fa-brands fa-react"></i> React.js</span>
+                <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-pill"><i class="fa-solid fa-code"></i> C++</span>
+                <span class="skill-pill"><i class="fa-solid fa-terminal"></i> C#</span>
+                <span class="skill-pill"><i class="fa-solid fa-bolt"></i> Vite</span>
+                <span class="skill-pill"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+                <span class="skill-pill"><i class="fa-brands fa-laravel"></i> Laravel</span>
+                <span class="skill-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="skill-pill"><i class="fa-solid fa-map-location-dot"></i> Leaflet.js / GeoJSON</span>
+                <span class="skill-pill"><i class="fa-solid fa-chart-pie"></i> Chart.js</span>
+              </div>
+            </div>
+
+            <!-- Editing & Creative Design -->
+            <div class="skill-category-card" data-reveal>
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3>Design & Creative Media</h3>
+              </div>
+              <p class="skill-cat-desc">UI/UX wireframing, branding, multimedia editing, and visual presentation.</p>
+              <div class="skill-pills">
+                <span class="skill-pill"><i class="fa-brands fa-figma"></i> Figma</span>
+                <span class="skill-pill"><i class="fa-solid fa-pen-nib"></i> UI/UX Design</span>
+                <span class="skill-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Canva Pro</span>
+                <span class="skill-pill"><i class="fa-solid fa-video"></i> CapCut</span>
+                <span class="skill-pill"><i class="fa-solid fa-file-powerpoint"></i> Pitch Deck Design</span>
+                <span class="skill-pill"><i class="fa-solid fa-bezier-curve"></i> Visual Branding</span>
+                <span class="skill-pill"><i class="fa-solid fa-mobile-screen"></i> Responsive Prototyping</span>
+              </div>
+            </div>
+
+            <!-- Productivity & Office Systems -->
+            <div class="skill-category-card" data-reveal>
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon"><i class="fa-solid fa-folder-open"></i></div>
+                <h3>Office & Cloud Workspace</h3>
+              </div>
+              <p class="skill-cat-desc">Administrative record keeping, spreadsheet analysis, and collaboration tools.</p>
+              <div class="skill-pills">
+                <span class="skill-pill"><i class="fa-solid fa-file-word"></i> Microsoft Word</span>
+                <span class="skill-pill"><i class="fa-solid fa-file-excel"></i> Microsoft Excel</span>
+                <span class="skill-pill"><i class="fa-solid fa-file-powerpoint"></i> Microsoft PowerPoint</span>
+                <span class="skill-pill"><i class="fa-brands fa-google-drive"></i> Google Workspace</span>
+                <span class="skill-pill"><i class="fa-solid fa-calendar-days"></i> Google Calendar</span>
+                <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+                <span class="skill-pill"><i class="fa-solid fa-table-list"></i> SIREKAP System</span>
+              </div>
+            </div>
+
+            <!-- Soft Skills & Leadership -->
+            <div class="skill-category-card" data-reveal>
+              <div class="skill-cat-header">
+                <div class="skill-cat-icon"><i class="fa-solid fa-users-gear"></i></div>
+                <h3>Leadership & Communication</h3>
+              </div>
+              <p class="skill-cat-desc">Interpersonal strengths demonstrated across university and community roles.</p>
+              <div class="skill-pills">
+                <span class="skill-pill"><i class="fa-solid fa-microphone"></i> Public Speaking</span>
+                <span class="skill-pill"><i class="fa-solid fa-bullhorn"></i> Master of Ceremony (MC)</span>
+                <span class="skill-pill"><i class="fa-solid fa-people-group"></i> Team Leadership</span>
+                <span class="skill-pill"><i class="fa-solid fa-handshake"></i> Public Relations (PR)</span>
+                <span class="skill-pill"><i class="fa-solid fa-clock"></i> Time Management</span>
+                <span class="skill-pill"><i class="fa-solid fa-file-signature"></i> Administrative Archiving</span>
+                <span class="skill-pill"><i class="fa-solid fa-shield-halved"></i> Crisis Management</span>
+                <span class="skill-pill"><i class="fa-solid fa-language"></i> English & Indonesian (Bilingual)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS SECTION -->
       <section id="projects" class="section section-alt">
         <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="section-label">Proyek</p>
-              <h2>Beberapa karya yang bisa menjadi referensi visual.</h2>
-            </div>
-            <a href="#contact" class="text-link">Ingin kerja sama?</a>
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">SHOWCASE</span>
+            <h2>Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-desc">Selected software, web platforms, AI tools, and interactive applications built with modern stacks.</p>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card" data-reveal>
-              <img src="src/assets/images/projects/tomato-disease-ai-main.png" alt="Tomato Disease AI" />
-              <div class="project-body">
-                <h3>Tomato Disease AI</h3>
-                <p>Solusi berbasis AI untuk mengenali penyakit tanaman tomat dengan antarmuka yang informatif.</p>
-                <span>Python • Computer Vision</span>
+          <!-- Project Filter Tabs -->
+          <div class="project-filters" data-reveal>
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="web">Web & Marketplace</button>
+            <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+            <button class="filter-btn" data-filter="game">Games & UI/UX</button>
+          </div>
+
+          <!-- Project Grid -->
+          <div class="projects-grid" id="projectsGrid">
+            
+            <!-- 1. MOCHI3AAR SEMARANG -->
+            <article class="project-card" data-category="web" data-project="mochi3aar" data-reveal>
+              <div class="project-img-wrapper">
+                <img src="src/assets/images/projects/Mochi3aar.png" alt="Mochi3aar Semarang Platform" class="project-img" />
+                <div class="project-overlay">
+                  <button class="btn btn-sm btn-modal-trigger" data-target="mochi3aar">
+                    <i class="fa-solid fa-eye"></i> View Full Details
+                  </button>
+                </div>
+                <div class="project-type-tag">Personal Project | 2026</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-row">
+                  <span class="project-category"><i class="fa-solid fa-store"></i> Web Marketplace</span>
+                </div>
+                <h3 class="project-title">Mochi3aar Semarang</h3>
+                <p class="project-summary">
+                  A modern web-based marketplace platform engineered for ordering desserts and authentic culinary souvenirs from local SMEs in Semarang.
+                </p>
+                <div class="project-tech-stack">
+                  <span>React.js</span>
+                  <span>Vite</span>
+                  <span>Tailwind CSS</span>
+                  <span>Shopping Cart</span>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-text-link btn-modal-trigger" data-target="mochi3aar">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
               </div>
             </article>
 
-            <article class="project-card" data-reveal>
-              <img src="src/assets/images/projects/Sudoku-Adventure.png" alt="Sudoku Adventure" />
-              <div class="project-body">
-                <h3>Sudoku Adventure</h3>
-                <p>Pengalaman permainan edukatif dengan konsep visual modern dan interaksi yang menarik.</p>
-                <span>Game • UI/UX</span>
+            <!-- 2. SUDOKU ADVENTURE -->
+            <article class="project-card" data-category="game" data-project="sudoku" data-reveal>
+              <div class="project-img-wrapper">
+                <img src="src/assets/images/projects/Sudoku-Adventure.png" alt="Sudoku Adventure: Smart Quest" class="project-img" />
+                <div class="project-overlay">
+                  <button class="btn btn-sm btn-modal-trigger" data-target="sudoku">
+                    <i class="fa-solid fa-eye"></i> View Full Details
+                  </button>
+                </div>
+                <div class="project-type-tag">Team Project | 2026</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-row">
+                  <span class="project-category"><i class="fa-solid fa-gamepad"></i> Educational Adventure Game</span>
+                </div>
+                <h3 class="project-title">Sudoku Adventure: Smart Quest</h3>
+                <p class="project-summary">
+                  An interactive adventure puzzle game merging classic Sudoku mechanics with world-map quests, pet dino progression, mini-games, and mobile-first gameplay.
+                </p>
+                <div class="project-tech-stack">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>Vite</span>
+                  <span>UI/UX</span>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-text-link btn-modal-trigger" data-target="sudoku">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
               </div>
             </article>
 
-            <article class="project-card" data-reveal>
-              <img src="src/assets/images/projects/Mochi3aar.png" alt="Mochi3aar" />
-              <div class="project-body">
-                <h3>Mochi3aar</h3>
-                <p>Visual branding dan presentasi produk yang terstruktur dengan baik untuk kebutuhan digital.</p>
-                <span>Branding • Web</span>
+            <!-- 3. GREENJOBMAP.ID -->
+            <article class="project-card" data-category="ai web" data-project="greenjobmap" data-reveal>
+              <div class="project-img-wrapper">
+                <img src="src/assets/images/projects/GreenJobMap.png" alt="GreenJobMap.id Platform" class="project-img" />
+                <div class="project-overlay">
+                  <button class="btn btn-sm btn-modal-trigger" data-target="greenjobmap">
+                    <i class="fa-solid fa-eye"></i> View Full Details
+                  </button>
+                </div>
+                <div class="project-type-tag">Personal Project | 2026</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-row">
+                  <span class="project-category"><i class="fa-solid fa-leaf"></i> AI & Geospatial Analytics</span>
+                </div>
+                <h3 class="project-title">GreenJobMap.id</h3>
+                <p class="project-summary">
+                  An AI-driven platform visualizing green job opportunities, renewable energy indexes, and talent distribution across Indonesian provinces via interactive GIS maps.
+                </p>
+                <div class="project-tech-stack">
+                  <span>React.js</span>
+                  <span>Laravel</span>
+                  <span>MySQL</span>
+                  <span>Leaflet.js</span>
+                  <span>Chart.js</span>
+                  <span>AI Skill Match</span>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-text-link btn-modal-trigger" data-target="greenjobmap">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
               </div>
             </article>
 
-            <article class="project-card" data-reveal>
-              <img src="src/assets/images/projects/GreenJobMap.png" alt="GreenJobMap" />
-              <div class="project-body">
-                <h3>GreenJobMap</h3>
-                <p>Platform pencarian pekerjaan yang berfokus pada peluang ramah lingkungan dan kemudahan akses informasi.</p>
-                <span>Product • Research</span>
+            <!-- 4. TOMATO DISEASE AI -->
+            <article class="project-card" data-category="ai" data-project="tomatodisease" data-reveal>
+              <div class="project-img-wrapper">
+                <img src="src/assets/images/projects/tomato-disease-ai-main.png" alt="Tomato Disease AI" class="project-img" />
+                <div class="project-overlay">
+                  <button class="btn btn-sm btn-modal-trigger" data-target="tomatodisease">
+                    <i class="fa-solid fa-eye"></i> View Full Details
+                  </button>
+                </div>
+                <div class="project-type-tag">AI / Machine Learning</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-row">
+                  <span class="project-category"><i class="fa-solid fa-microscope"></i> Computer Vision AI</span>
+                </div>
+                <h3 class="project-title">Tomato Disease AI</h3>
+                <p class="project-summary">
+                  A smart computer vision solution for detecting and classifying foliar tomato crop diseases with high accuracy and actionable farmer guidance.
+                </p>
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span>Computer Vision</span>
+                  <span>Machine Learning</span>
+                  <span>Image Classification</span>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-text-link btn-modal-trigger" data-target="tomatodisease">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
               </div>
             </article>
+
+            <!-- 5. SISTEM PREDIKSI SEKOLAH UNGGUL -->
+            <article class="project-card" data-category="ai web" data-project="sekolahunggul" data-reveal>
+              <div class="project-img-wrapper">
+                <img src="src/assets/images/projects/sekolah-unggul.png" alt="Sistem Prediksi Sekolah Unggul" class="project-img" />
+                <div class="project-overlay">
+                  <button class="btn btn-sm btn-modal-trigger" data-target="sekolahunggul">
+                    <i class="fa-solid fa-eye"></i> View Full Details
+                  </button>
+                </div>
+                <div class="project-type-tag">AI / Machine Learning | 2026</div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-row">
+                  <span class="project-category"><i class="fa-solid fa-graduation-cap"></i> AI Decision Tree Classifier</span>
+                </div>
+                <h3 class="project-title">Sistem Prediksi Sekolah Unggul</h3>
+                <p class="project-summary">
+                  An automated AI and Machine Learning evaluation system using Decision Tree Classifier to classify and predict school quality standards based on academic, educator, and facility metrics.
+                </p>
+                <div class="project-tech-stack">
+                  <span>Python</span>
+                  <span>Machine Learning</span>
+                  <span>Decision Tree</span>
+                  <span>Streamlit</span>
+                  <span>Data Analytics</span>
+                </div>
+                <div class="project-card-footer">
+                  <button class="btn-text-link btn-modal-trigger" data-target="sekolahunggul">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
 
-      <section id="testimonials" class="section">
+      <!-- WORK & PROFESSIONAL EXPERIENCES -->
+      <section id="experience" class="section">
         <div class="container">
-          <p class="section-label">Testimoni</p>
-          <h2>Yang orang lain katakan tentang pendekatan saya.</h2>
-          <div class="testimonial-grid">
-            <article class="card" data-reveal>
-              <p>“Sangat detail, rapi, dan punya rasa visual yang kuat. Prosesnya terasa profesional.”</p>
-              <strong>— Rekan Kolaborasi</strong>
-            </article>
-            <article class="card" data-reveal>
-              <p>“Website yang dibuat terasa modern dan mudah dipahami, cocok untuk presentasi personal branding.”</p>
-              <strong>— Klien</strong>
-            </article>
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">CAREER JOURNEY</span>
+            <h2>Professional <span class="gradient-text">Experiences</span></h2>
+            <p class="section-desc">Practical experience across education, digital marketing, public administration, and live event hosting.</p>
+          </div>
+
+          <div class="timeline-container">
+            
+            <!-- Home Tutor -->
+            <div class="timeline-card" data-reveal>
+              <div class="timeline-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-period">April 2024 – Present</span>
+                  <span class="timeline-badge badge-parttime">Part Time Job</span>
+                </div>
+                <h3 class="timeline-role">Home Tutor</h3>
+                <h4 class="timeline-company">Independent Tutoring Services</h4>
+                <ul class="styled-list">
+                  <li>Demonstrated proven ability to create engaging, customized, and personality-driven learning plans tailored to student learning styles.</li>
+                  <li>Skilled in reading comprehension, analytical writing, and fostering effective daily study habits across all 6th-grade academic subjects.</li>
+                  <li>Applied creative pedagogical methods that significantly improved student academic achievement and test scores from <strong>40% to 100%</strong>.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Brand Partner Oriflame -->
+            <div class="timeline-card" data-reveal>
+              <div class="timeline-icon"><i class="fa-solid fa-bullhorn"></i></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-period">May 2024 – Present</span>
+                  <span class="timeline-badge badge-parttime">Part Time Job</span>
+                </div>
+                <h3 class="timeline-role">Brand Partner</h3>
+                <h4 class="timeline-company">Oriflame Indonesia</h4>
+                <ul class="styled-list">
+                  <li>Spearheaded digital marketing and brand promotion initiatives for Oriflame lifestyle, beauty, and wellness products.</li>
+                  <li>Developed targeted customer acquisition sales plans, audience segmentation, and personalized product consultation strategies.</li>
+                  <li>Generated creative promotional digital content across social media channels to engage prospective leads and boost product conversions.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Master of Ceremony -->
+            <div class="timeline-card" data-reveal>
+              <div class="timeline-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-period">February 2024 – Present</span>
+                  <span class="timeline-badge badge-parttime">Part Time / Freelance</span>
+                </div>
+                <h3 class="timeline-role">Master of Ceremony (MC)</h3>
+                <h4 class="timeline-company">University & Community Events</h4>
+                <ul class="styled-list">
+                  <li>Hosted formal and non-formal academic seminars, cultural events, and organizational gatherings with professional crowd articulation.</li>
+                  <li>Coordinated live rundown timings with stage managers, speakers, VIP guests, and technical committees to ensure seamless execution.</li>
+                  <li>Maintained vibrant audience engagement, adaptability under dynamic schedules, and prompt crisis handling during live programs.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- SIREKAP 1 Operator -->
+            <div class="timeline-card" data-reveal>
+              <div class="timeline-icon"><i class="fa-solid fa-check-to-slot"></i></div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <span class="timeline-period">February 2024</span>
+                  <span class="timeline-badge badge-gov">Election Committee (KPPS)</span>
+                </div>
+                <h3 class="timeline-role">SIREKAP 1 Operator & Poll Officer</h3>
+                <h4 class="timeline-company">KPPS, Komisi Pemilihan Umum (KPU) Indonesia</h4>
+                <ul class="styled-list">
+                  <li>Conducted official tallying, verification, and audit of valid and invalid national election ballots with zero-error tolerance.</li>
+                  <li>Authored and finalized statutory voting result reports and official Model C1 documents.</li>
+                  <li>Digitized and accurately inputted ballot documentation directly into the nationwide SIREKAP mobile-cloud system in real-time.</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section section-alt" data-reveal>
-        <div class="container contact-box">
-          <div>
-            <p class="section-label">Kontak</p>
-            <h2>Siap membangun karya digital berikutnya?</h2>
-            <p>Jika Anda ingin bekerja sama, saya senang mendengar ide, kebutuhan, dan peluang kolaborasi Anda.</p>
+      <!-- ORGANIZATIONAL EXPERIENCE SECTION -->
+      <section id="organizations" class="section section-alt">
+        <div class="container">
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">LEADERSHIP & IMPACT</span>
+            <h2>Organization <span class="gradient-text">Experience</span></h2>
+            <p class="section-desc">Active governance, student advocacy, fundraising leadership, and community public relations.</p>
           </div>
-          <div class="contact-actions">
-            <a href="mailto:caca@example.com" class="btn btn-primary">Email Saya</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" class="btn btn-secondary">LinkedIn</a>
+
+          <div class="org-grid">
+            
+            <!-- BEM FIK UDINUS -->
+            <div class="org-card" data-reveal>
+              <div class="org-card-header">
+                <div class="org-icon-badge"><i class="fa-solid fa-landmark"></i></div>
+                <div class="org-header-text">
+                  <span class="org-period">August 2024 – Present</span>
+                  <h3 class="org-name">BEM FIK UDINUS</h3>
+                  <p class="org-role-title">Secretary 1 (Sekretaris 1)</p>
+                </div>
+              </div>
+              <div class="org-card-body">
+                <p class="org-summary">
+                  Student Executive Board, Faculty of Computer Science, Universitas Dian Nuswantoro.
+                </p>
+                <ul class="styled-list">
+                  <li>Overseeing end-to-end administrative management, official correspondence, and formal document archives for the executive board.</li>
+                  <li>Recording, structuring, and maintaining critical faculty documents, accountability reports, and institutional archives.</li>
+                  <li>Arranging executive meeting schedules, agendas, and coordinating strategic communication networks across all faculty divisions.</li>
+                  <li>Ensuring rapid, transparent information flow between student governance bodies, faculty leadership, and collegiate organizations.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- NAYS CHAPTER SEMARANG -->
+            <div class="org-card" data-reveal>
+              <div class="org-card-header">
+                <div class="org-icon-badge"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div class="org-header-text">
+                  <span class="org-period">August 2024 – August 2025</span>
+                  <h3 class="org-name">NAYS Chapter Semarang</h3>
+                  <p class="org-role-title">Head of Fundraising Division</p>
+                </div>
+              </div>
+              <div class="org-card-body">
+                <p class="org-summary">
+                  National Action for Youth Society (NAYS) — Empowering youth leadership and education initiatives.
+                </p>
+                <ul class="styled-list">
+                  <li>Formulated financial strategy, updates, and milestone reporting for all organizational fundraising operations.</li>
+                  <li>Secured crucial sponsorship funds and financial resources to sustain youth teaching programs and social outreach projects.</li>
+                  <li>Supervised division budgeting, financial compliance, bookkeeping, and commercial merchandise sales initiatives.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- KARANG TARUNA RW 09 -->
+            <div class="org-card" data-reveal>
+              <div class="org-card-header">
+                <div class="org-icon-badge"><i class="fa-solid fa-people-arrows"></i></div>
+                <div class="org-header-text">
+                  <span class="org-period">August 2024 – Present</span>
+                  <h3 class="org-name">Karang Taruna RW 09</h3>
+                  <p class="org-role-title">Public Relations Officer</p>
+                </div>
+              </div>
+              <div class="org-card-body">
+                <p class="org-summary">
+                  Community Youth Organization dedicated to social welfare, neighborhood empowerment, and community engagement.
+                </p>
+                <ul class="styled-list">
+                  <li>Forging and safeguarding a positive public image, reputation, and goodwill for community youth programs.</li>
+                  <li>Overseeing social media presence, announcement campaigns, and digital channels for community participation.</li>
+                  <li>Managing external stakeholder relations and executing proactive communication during community events and public coordination.</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATIONS & TRAINING SECTION -->
+      <section id="certifications" class="section">
+        <div class="container">
+          <div class="section-header text-center" data-reveal>
+            <span class="section-badge">CREDENTIALS</span>
+            <h2>Certifications & <span class="gradient-text">Training</span></h2>
+            <p class="section-desc">Continuous professional development across Artificial Intelligence, Game Design, Leadership, and Language.</p>
+          </div>
+
+          <div class="cert-grid">
+            
+            <!-- IBM AI Engineering -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-certificate"></i> Verified Specialization</div>
+              <div class="cert-header">
+                <h4>IBM AI Engineering Specialization</h4>
+                <span class="cert-issuer">Coursera & IBM • May 2026</span>
+              </div>
+              <p>Comprehensive training in deep learning, neural networks, machine learning algorithms, and AI deployment pipelines.</p>
+              <div class="cert-tags">
+                <span>AI Engineering</span>
+                <span>Deep Learning</span>
+                <span>IBM</span>
+              </div>
+            </div>
+
+            <!-- IBM Machine Learning -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-certificate"></i> Verified Specialization</div>
+              <div class="cert-header">
+                <h4>IBM Machine Learning Specialization</h4>
+                <span class="cert-issuer">Coursera & IBM • October 2025</span>
+              </div>
+              <p>Hands-on mastery of predictive modeling, supervised and unsupervised machine learning algorithms using Python.</p>
+              <div class="cert-tags">
+                <span>Machine Learning</span>
+                <span>Python</span>
+                <span>Data Science</span>
+              </div>
+            </div>
+
+            <!-- Game Design: Art and Concepts -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-certificate"></i> Course Certificate</div>
+              <div class="cert-header">
+                <h4>Game Design: Art and Concepts</h4>
+                <span class="cert-issuer">Coursera • April 2026</span>
+              </div>
+              <p>In-depth exploration of interactive game mechanics, visual world-building, UI/UX aesthetics, and game asset design.</p>
+              <div class="cert-tags">
+                <span>Game Design</span>
+                <span>UI/UX</span>
+                <span>Concept Art</span>
+              </div>
+            </div>
+
+            <!-- English Proficiency CFLT -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-language"></i> Language Assessment</div>
+              <div class="cert-header">
+                <h4>English Proficiency Assessment (Score: 450)</h4>
+                <span class="cert-issuer">CFLT UDINUS • 2026</span>
+              </div>
+              <p>Certified English language competency assessment covering reading comprehension, grammar structure, and listening.</p>
+              <div class="cert-tags">
+                <span>Score: 450</span>
+                <span>CFLT UDINUS</span>
+                <span>English</span>
+              </div>
+            </div>
+
+            <!-- LKMM-TM -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-users"></i> Leadership Training</div>
+              <div class="cert-header">
+                <h4>LKMM-TM Participant (Intermediate Leadership)</h4>
+                <span class="cert-issuer">BEM KM UDINUS • June 2025</span>
+              </div>
+              <p>Selective intermediate student management and leadership training for organizational strategy and problem solving.</p>
+              <div class="cert-tags">
+                <span>Leadership</span>
+                <span>Strategy</span>
+                <span>UDINUS</span>
+              </div>
+            </div>
+
+            <!-- FIX CUP 5.0 Security Coordinator -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-shield-halved"></i> Committee Role</div>
+              <div class="cert-header">
+                <h4>Security Coordinator — FIX CUP 5.0</h4>
+                <span class="cert-issuer">BEM FIK UDINUS • July 2025</span>
+              </div>
+              <p>Organized on-ground security operations, crowd control, and safety protocols for the annual faculty-wide sports tournament.</p>
+              <div class="cert-tags">
+                <span>Event Security</span>
+                <span>Coordination</span>
+                <span>BEM FIK</span>
+              </div>
+            </div>
+
+            <!-- PCP Committee -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-compass"></i> Committee Role</div>
+              <div class="cert-header">
+                <h4>Security & Transportation Division — PCP</h4>
+                <span class="cert-issuer">BEM FIK UDINUS • August 2025</span>
+              </div>
+              <p>Managed logistics, transportation fleet, and delegate safety during the orientation & cadre onboarding program.</p>
+              <div class="cert-tags">
+                <span>Logistics</span>
+                <span>Cadre Training</span>
+                <span>BEM FIK</span>
+              </div>
+            </div>
+
+            <!-- LKKM-TD Consumption -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-utensils"></i> Committee Role</div>
+              <div class="cert-header">
+                <h4>Consumption Coordinator — LKKM-TD</h4>
+                <span class="cert-issuer">BEM FIK UDINUS • February 2025</span>
+              </div>
+              <p>Spearheaded dietary planning, budget allocation, and meal distribution logistics for all participants and facilitators.</p>
+              <div class="cert-tags">
+                <span>Logistics</span>
+                <span>Event Ops</span>
+                <span>LKKM-TD</span>
+              </div>
+            </div>
+
+            <!-- NAYS Teaching & BookCamp & ELFAST -->
+            <div class="cert-card" data-reveal>
+              <div class="cert-badge-top"><i class="fa-solid fa-book-open"></i> Community Training</div>
+              <div class="cert-header">
+                <h4>Teaching & Community Programs</h4>
+                <span class="cert-issuer">Multiple Organizations • 2019 — 2023</span>
+              </div>
+              <p>Completed <em>Nays Inspiring Teaching</em> (Nov 2023), <em>BookCamp Semarang</em> (Oct 2023), and <em>Extensive English Class</em> at ELFAST (Jan 2019).</p>
+              <div class="cert-tags">
+                <span>Inspiring Teaching</span>
+                <span>BookCamp</span>
+                <span>ELFAST</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section section-alt">
+        <div class="container">
+          <div class="contact-card-premium" data-reveal>
+            <div class="contact-header-content">
+              <span class="section-badge">LET'S CONNECT</span>
+              <h2>Ready to collaborate on <span class="gradient-text">innovative projects</span>?</h2>
+              <p>
+                Whether you have an exciting tech project, internship opportunity, event hosting request, or simply want to connect, my inbox is always open!
+              </p>
+
+              <div class="contact-info-list">
+                <a href="mailto:ailsanajwa248@gmail.com" class="contact-info-item">
+                  <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                  <div>
+                    <span class="label">Email Address</span>
+                    <strong>ailsanajwa248@gmail.com</strong>
+                  </div>
+                </a>
+
+                <a href="https://wa.me/628567549699" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                  <div class="icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+                  <div>
+                    <span class="label">Phone / WhatsApp</span>
+                    <strong>08567549699 (+62 856-7549-699)</strong>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/ailsanajwa24" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+                  <div class="icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+                  <div>
+                    <span class="label">LinkedIn Profile</span>
+                    <strong>linkedin.com/in/ailsanajwa24</strong>
+                  </div>
+                </a>
+
+                <div class="contact-info-item">
+                  <div class="icon-circle"><i class="fa-solid fa-map-pin"></i></div>
+                  <div>
+                    <span class="label">Location</span>
+                    <strong>Semarang City, Central Java, Indonesia (50117)</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-action-box">
+              <div class="action-card-inner">
+                <h3>Direct Message</h3>
+                <p>Send a direct email or click below to start a quick chat with me.</p>
+                <div class="action-btns">
+                  <a href="mailto:ailsanajwa248@gmail.com?subject=Collaboration%20Inquiry%20from%20Portfolio" class="btn btn-primary btn-block">
+                    <i class="fa-solid fa-paper-plane"></i> Send Email
+                  </a>
+                  <a href="https://wa.me/628567549699?text=Hello%20Ailsa,%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-block">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                  </a>
+                  <a href="https://www.linkedin.com/in/ailsanajwa24" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block">
+                    <i class="fa-brands fa-linkedin"></i> View LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- PROJECT DETAIL MODAL -->
+    <div class="modal-backdrop" id="projectModal" aria-hidden="true" role="dialog">
+      <div class="modal-dialog">
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-content" id="modalContent">
+          <!-- Dynamic Content Injected by script.js -->
+        </div>
+      </div>
+    </div>
+
+    <!-- SITE FOOTER -->
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Portofolio Caca. Semua hak dilindungi.</p>
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="brand">Ailsa Najwa<span>.</span></a>
+          <p>Informatics Engineering Student • Universitas Dian Nuswantoro</p>
+        </div>
+
+        <div class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#organizations">Organizations</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Ailsa Najwa Insyira Putri. All rights reserved.</p>
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/ailsanajwa24" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:ailsanajwa248@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://portofolio-ailsa-najwa.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live Website"><i class="fa-solid fa-globe"></i></a>
+          </div>
+        </div>
       </div>
     </footer>
 
