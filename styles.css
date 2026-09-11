@@ -1487,7 +1487,8 @@ button {
   color: #ffffff !important;
 }
 
-.btn-project-github {
+.btn-project-github,
+.btn-project-secondary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1504,12 +1505,86 @@ button {
   box-shadow: var(--shadow-sm);
 }
 
-.btn-project-github:hover {
+.btn-project-github:hover,
+.btn-project-secondary:hover {
   background: var(--text-heading);
   color: #ffffff !important;
   border-color: var(--text-heading);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
+}
+
+/* Featured Project Luxury Pink Highlight */
+.project-card.featured-project-card {
+  border: 1.5px solid rgba(219, 39, 119, 0.35);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 240, 248, 0.88) 100%);
+  box-shadow: 0 12px 32px rgba(190, 24, 93, 0.12), 0 0 24px rgba(236, 72, 153, 0.12);
+  position: relative;
+}
+
+.project-card.featured-project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 24px 24px 0 0;
+  z-index: 2;
+}
+
+.project-card.featured-project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(219, 39, 119, 0.65);
+  box-shadow: 0 22px 48px rgba(190, 24, 93, 0.22), 0 0 32px rgba(236, 72, 153, 0.22);
+}
+
+.project-type-tag.featured-tag {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(190, 24, 93, 0.35);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.featured-label-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(219, 39, 119, 0.12);
+  color: var(--primary);
+  border: 1px solid rgba(219, 39, 119, 0.3);
+}
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.btn-pink-demo {
+  background: var(--gradient-primary);
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(219, 39, 119, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.btn-pink-demo:hover {
+  background: linear-gradient(135deg, #a21caf 0%, #be185d 50%, #e11d48 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(219, 39, 119, 0.45);
 }
 
 /* ==========================================================================

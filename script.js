@@ -191,6 +191,23 @@ filterBtns.forEach((btn) => {
 
 // 6. Project In-Depth Modal Data & Handler
 const projectData = {
+  edutrack: {
+    title: 'EduTrack — Student Academic Dashboard',
+    type: 'Featured Project | 2026',
+    category: 'Web Development / Academic Dashboard',
+    image: 'src/assets/images/projects/edutrack.png',
+    techStack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript'],
+    description:
+      'EduTrack is a modern student academic dashboard designed to organize academic information, assignments, schedules, grades, attendance, notifications, and student activities in one intuitive interface.',
+    bullets: [
+      'Architected an all-in-one student academic dashboard to centralize schedules, assignments, attendance rates, and GPA metrics.',
+      'Designed and implemented responsive mobile-first user interfaces using React, Vite, and Tailwind CSS with smooth transitions and glassmorphism styling.',
+      'Built interactive features including real-time notifications, grade progress calculators, course timelines, and student activity logs.',
+      'Optimized web performance with Vite bundling and clean component architecture, published live on Vercel.',
+    ],
+    liveDemo: 'https://edu-track-student-academic.vercel.app/',
+    github: 'https://github.com/ailsanajawa/EduTrackStudentAcademic',
+  },
   mochi3aar: {
     title: 'Mochi3aar Semarang — Dessert & Souvenir Marketplace',
     type: 'Personal Project | 2026',
@@ -205,6 +222,7 @@ const projectData = {
       'Built core e-commerce features including dynamic product catalog, multi-category filtering, persistent shopping cart, live order tracking, checkout payment page, and detailed customer order history.',
       'Optimized performance and load times with Vite bundling and clean modular component architecture.',
     ],
+    liveDemo: 'https://mochi3aar-semarang-app.vercel.app/',
   },
   sudoku: {
     title: 'Sudoku Adventure: Smart Quest — Educational Puzzle Adventure Game',
@@ -220,6 +238,7 @@ const projectData = {
       'Constructed core gameplay features including procedural Sudoku boards, world map exploration, challenge mode, mini-games, daily login rewards, in-game shop system, achievements engine, and companion Pet Dino progression.',
       'Refined user engagement through cheerful visual design, dynamic animations, and intuitive touch feedback.',
     ],
+    liveDemo: 'https://sudoku-adventure.vercel.app/',
   },
   greenjobmap: {
     title: 'GreenJobMap.id — AI-Based Green Jobs Mapping Platform',
@@ -234,6 +253,8 @@ const projectData = {
       'Designed and implemented a responsive analytics dashboard using React.js, Laravel, MySQL, Leaflet.js, GeoJSON, and Chart.js to render provincial GIS data and interactive statistical visualizations.',
       'Built core modules including interactive province map overlays, Green Job Index metrics, verified green industry directory, training & certification hub, smart multi-filter search, user profile dashboards, and AI-based skill match recommendations.',
     ],
+    liveDemo: 'https://green-job-map.vercel.app/',
+    github: 'https://github.com/ailsanajawa/GreenJobMap',
   },
   tomatodisease: {
     title: 'Tomato Disease AI — Foliar Pathology Recognition System',
@@ -271,6 +292,7 @@ const projectData = {
       'Evaluated key performance dimensions: academic achievement, teacher-to-student ratios, accreditation readiness, laboratory & digital infrastructure, and graduation rates.',
       'Generated instant analytical diagnostic summaries, probability metrics, and data-driven recommendations to support strategic institutional quality improvements.',
     ],
+    liveDemo: 'https://kelayakansekolahunggul-pddx65nap3wat2tycjxlye.streamlit.app/',
   },
 };
 
@@ -287,6 +309,25 @@ function openModal(projectId) {
     .join('');
 
   const bulletsHtml = data.bullets.map((b) => `<li>${b}</li>`).join('');
+
+  const demoBtnHtml = data.liveDemo
+    ? `<a href="${data.liveDemo}" target="_blank" rel="noopener noreferrer" class="btn-project-primary btn-pink-demo">
+        Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+       </a>`
+    : '';
+
+  const githubBtnHtml = data.github
+    ? `<a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn-project-github btn-project-secondary">
+        <i class="fa-brands fa-github"></i> View on GitHub
+       </a>`
+    : '';
+
+  const actionsHtml = (demoBtnHtml || githubBtnHtml)
+    ? `<div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        ${demoBtnHtml}
+        ${githubBtnHtml}
+       </div>`
+    : '';
 
   modalContent.innerHTML = `
     <img src="${data.image}" alt="${data.title}" class="modal-hero-img" />
@@ -312,6 +353,7 @@ function openModal(projectId) {
         ${techBadgesHtml}
       </div>
     </div>
+    ${actionsHtml}
   `;
 
   projectModal.classList.add('is-active');
