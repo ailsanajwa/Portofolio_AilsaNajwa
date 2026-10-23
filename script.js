@@ -206,7 +206,7 @@ const projectData = {
       'Optimized web performance with Vite bundling and clean component architecture, published live on Vercel.',
     ],
     liveDemo: 'https://edu-track-student-academic.vercel.app/',
-    github: 'https://github.com/ailsanajawa/EduTrackStudentAcademic',
+    github: 'https://github.com/ailsanajwa/EduTrackStudentAcademic',
   },
   wastrain: {
     title: 'WastraIN — AI Batik Classification',
@@ -232,11 +232,11 @@ const projectData = {
       '<strong>Laboratorium AI:</strong> Fitur benchmark dan komparasi performa inferensi antara arsitektur model EfficientNetV2-B0 dan MobileNetV3-Large.',
       '<strong>Integrasi TensorFlow Lite:</strong> Optimalisasi model AI terkuantisasi agar ringan, hemat daya baterai smartphone, dan dapat berjalan lancar tanpa koneksi internet (offline-first).',
     ],
-    liveDemo: 'https://github.com/ailsanajawa/WastraIN/releases/latest',
+    liveDemo: 'https://github.com/ailsanajwa/WastraIN/releases/latest',
     demoLabel: 'Download WastraIN APK',
     demoIcon: 'fa-brands fa-android',
     downloadHint: 'Unduh file <strong>app-debug.apk</strong> pada bagian <strong>Assets</strong> di GitHub Releases.',
-    github: 'https://github.com/ailsanajawa/WastraIN',
+    github: 'https://github.com/ailsanajwa/WastraIN',
   },
   mochi3aar: {
     title: 'Mochi3aar Semarang — Dessert & Souvenir Marketplace',
@@ -284,7 +284,7 @@ const projectData = {
       'Built core modules including interactive province map overlays, Green Job Index metrics, verified green industry directory, training & certification hub, smart multi-filter search, user profile dashboards, and AI-based skill match recommendations.',
     ],
     liveDemo: 'https://green-job-map.vercel.app/',
-    github: 'https://github.com/ailsanajawa/GreenJobMap',
+    github: 'https://github.com/ailsanajwa/GreenJobMap',
   },
   tomatodisease: {
     title: 'Tomato Disease AI — Foliar Pathology Recognition System',
