@@ -469,8 +469,9 @@
           <!-- Project Filter Tabs -->
           <div class="project-filters" data-reveal>
             <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
             <button class="filter-btn" data-filter="ai">AI & Machine Learning</button>
+            <button class="filter-btn" data-filter="android">Android App</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
             <button class="filter-btn" data-filter="game">Game Development</button>
           </div>
 
@@ -521,10 +522,65 @@
               </div>
             </article>
 
-            
+            <!-- WASTRAIN — AI BATIK CLASSIFICATION (ANDROID & AI PROJECT) -->
+            <article class="project-card wastrain-card" data-category="ai android" data-project="wastrain" data-reveal>
+              <div class="project-img-wrapper">
+                <img src="src/assets/images/projects/wastrain.svg" alt="WastraIN — AI Batik Classification" class="project-img" />
+                <div class="project-overlay">
+                  <a href="https://github.com/ailsanajawa/WastraIN/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-sm">
+                    <i class="fa-brands fa-android"></i> Download APK <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <button class="btn btn-sm btn-modal-trigger" data-target="wastrain" aria-label="View WastraIN details" style="margin-left: 0.5rem; background: rgba(255,255,255,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.4); color: #fff;">
+                    <i class="fa-solid fa-circle-info"></i> Details
+                  </button>
+                </div>
+                <div class="project-type-tag android-tag">
+                  <i class="fa-brands fa-android"></i> Android • AI
+                </div>
+              </div>
+              <div class="project-card-body">
+                <div class="project-meta-row">
+                  <span class="project-category"><i class="fa-brands fa-android"></i> Android &amp; AI / Computer Vision</span>
+                  <span class="featured-label-pill"><i class="fa-solid fa-brain"></i> On-Device AI</span>
+                </div>
+                <h3 class="project-title">WastraIN — AI Batik Classification</h3>
+                <p class="project-summary">
+                  Aplikasi Android untuk mengenali dan mengklasifikasikan motif batik Indonesia menggunakan teknologi Artificial Intelligence.
+                </p>
 
-            
-            
+                <!-- Fitur Utama WastraIN -->
+                <div class="project-features-list">
+                  <span class="feature-badge"><i class="fa-solid fa-shapes"></i> Klasifikasi Motif Batik</span>
+                  <span class="feature-badge"><i class="fa-solid fa-fire-flame-curved"></i> Jejak AI (Grad-CAM)</span>
+                  <span class="feature-badge"><i class="fa-solid fa-palette"></i> Palet Wastra</span>
+                  <span class="feature-badge"><i class="fa-solid fa-flask"></i> Laboratorium AI</span>
+                </div>
+
+                <div class="project-tech-stack">
+                  <span>Kotlin</span>
+                  <span>Android Studio</span>
+                  <span>TensorFlow Lite</span>
+                  <span>EfficientNetV2-B0</span>
+                  <span>MobileNetV3-Large</span>
+                </div>
+                <div class="project-card-footer">
+                  <div class="project-card-actions">
+                    <a href="https://github.com/ailsanajawa/WastraIN/releases/latest" target="_blank" rel="noopener noreferrer" class="btn-project-primary btn-pink-demo btn-download-apk" title="Download APK dari GitHub Releases (Assets / app-debug.apk)">
+                      <i class="fa-brands fa-android"></i> Download WastraIN APK
+                    </a>
+                    <a href="https://github.com/ailsanajawa/WastraIN" target="_blank" rel="noopener noreferrer" class="btn-project-github btn-project-secondary">
+                      <i class="fa-brands fa-github"></i> View GitHub ↗
+                    </a>
+                  </div>
+                  <div class="project-footer-note">
+                    <span><i class="fa-solid fa-circle-info"></i> Unduh <code>app-debug.apk</code> di menu <strong>Assets</strong> GitHub Releases</span>
+                    <button class="btn-link-details btn-modal-trigger" data-target="wastrain" aria-label="Lihat detail WastraIN">
+                      Detail <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
             <!-- 1. SUDOKU ADVENTURE -->
             <article class="project-card" data-category="game" data-project="sudoku" data-reveal>
               <div class="project-img-wrapper">

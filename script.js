@@ -208,6 +208,36 @@ const projectData = {
     liveDemo: 'https://edu-track-student-academic.vercel.app/',
     github: 'https://github.com/ailsanajawa/EduTrackStudentAcademic',
   },
+  wastrain: {
+    title: 'WastraIN — AI Batik Classification',
+    type: 'Android AI Project | 2026',
+    category: 'Android • On-Device AI • Computer Vision',
+    image: 'src/assets/images/projects/wastrain.svg',
+    techStack: [
+      'Kotlin',
+      'Android Studio',
+      'TensorFlow Lite',
+      'EfficientNetV2-B0',
+      'MobileNetV3-Large',
+      'Grad-CAM (Explainable AI)',
+      'CameraX API',
+      'Material 3 Design',
+    ],
+    description:
+      'Aplikasi Android untuk mengenali dan mengklasifikasikan motif batik Indonesia menggunakan teknologi Artificial Intelligence secara on-device, real-time, dan akurat.',
+    bullets: [
+      '<strong>Klasifikasi Motif Batik:</strong> Mengenali dan mengklasifikasikan berbagai motif batik nusantara secara presisi menggunakan deep learning model on-device dengan latensi rendah.',
+      '<strong>Jejak AI dengan Grad-CAM:</strong> Visualisasi heatmap Explainable AI (XAI) untuk menunjukkan area motif spesifik yang menjadi dasar klasifikasi model AI.',
+      '<strong>Palet Wastra:</strong> Fitur ekstraksi dan analisis palet warna dominan dari kain batik untuk pelestarian budaya serta inspirasi desain visual.',
+      '<strong>Laboratorium AI:</strong> Fitur benchmark dan komparasi performa inferensi antara arsitektur model EfficientNetV2-B0 dan MobileNetV3-Large.',
+      '<strong>Integrasi TensorFlow Lite:</strong> Optimalisasi model AI terkuantisasi agar ringan, hemat daya baterai smartphone, dan dapat berjalan lancar tanpa koneksi internet (offline-first).',
+    ],
+    liveDemo: 'https://github.com/ailsanajawa/WastraIN/releases/latest',
+    demoLabel: 'Download WastraIN APK',
+    demoIcon: 'fa-brands fa-android',
+    downloadHint: 'Unduh file <strong>app-debug.apk</strong> pada bagian <strong>Assets</strong> di GitHub Releases.',
+    github: 'https://github.com/ailsanajawa/WastraIN',
+  },
   mochi3aar: {
     title: 'Mochi3aar Semarang — Dessert & Souvenir Marketplace',
     type: 'Personal Project | 2026',
@@ -312,25 +342,34 @@ function openModal(projectId) {
 
   const demoBtnHtml = data.liveDemo
     ? `<a href="${data.liveDemo}" target="_blank" rel="noopener noreferrer" class="btn-project-primary btn-pink-demo">
-        Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        ${data.demoIcon ? `<i class="${data.demoIcon}"></i> ` : ''}${data.demoLabel || 'Live Demo'} <i class="fa-solid fa-arrow-up-right-from-square"></i>
        </a>`
     : '';
 
   const githubBtnHtml = data.github
     ? `<a href="${data.github}" target="_blank" rel="noopener noreferrer" class="btn-project-github btn-project-secondary">
-        <i class="fa-brands fa-github"></i> View on GitHub
+        <i class="fa-brands fa-github"></i> ${data.githubLabel || 'View on GitHub'}
        </a>`
     : '';
 
-  const actionsHtml = (demoBtnHtml || githubBtnHtml)
-    ? `<div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; gap: 0.75rem; flex-wrap: wrap;">
-        ${demoBtnHtml}
-        ${githubBtnHtml}
+  const hintHtml = data.downloadHint
+    ? `<div style="width: 100%; margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem;">
+        <i class="fa-solid fa-circle-info" style="color: var(--primary);"></i> <span>${data.downloadHint}</span>
        </div>`
     : '';
 
+  const actionsHtml = (demoBtnHtml || githubBtnHtml)
+    ? `<div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle); display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;">
+        ${demoBtnHtml}
+        ${githubBtnHtml}
+        ${hintHtml}
+       </div>`
+    : '';
+
+  const cardImg = document.querySelector(`[data-project="${projectId}"] .project-img`)?.getAttribute('src') || data.image;
+
   modalContent.innerHTML = `
-    <img src="${data.image}" alt="${data.title}" class="modal-hero-img" />
+    <img src="${cardImg}" alt="${data.title}" class="modal-hero-img" />
     <div class="modal-badge-group">
       <span class="section-badge" style="margin-bottom:0;">${data.type}</span>
       <span class="status-pill">${data.category}</span>

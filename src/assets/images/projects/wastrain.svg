@@ -1,0 +1,302 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#190410" />
+      <stop offset="45%" stop-color="#2c091d" />
+      <stop offset="80%" stop-color="#3d0c27" />
+      <stop offset="100%" stop-color="#15030e" />
+    </linearGradient>
+
+    <radialGradient id="pinkGlow" cx="25%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#db2777" stop-opacity="0.38" />
+      <stop offset="60%" stop-color="#db2777" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#db2777" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="androidGlow" cx="75%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#3ddc84" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- UI Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" />
+      <stop offset="50%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#be185d" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04" />
+    </linearGradient>
+
+    <linearGradient id="phoneBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#3ddc84" stop-opacity="0.5" />
+    </linearGradient>
+
+    <linearGradient id="heatGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.6" />
+      <stop offset="35%" stop-color="#10b981" stop-opacity="0.65" />
+      <stop offset="70%" stop-color="#f59e0b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.85" />
+    </linearGradient>
+
+    <linearGradient id="phoneScreenBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e0716" />
+      <stop offset="100%" stop-color="#2a081e" />
+    </linearGradient>
+
+    <!-- Traditional Batik Kawung Pattern Motif -->
+    <pattern id="batikKawung" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 Q 37.5 12.5 50 25 Q 37.5 37.5 25 50 Q 12.5 37.5 0 25 Q 12.5 12.5 25 0 Z" fill="none" stroke="#f472b6" stroke-width="0.75" stroke-opacity="0.14" />
+      <path d="M 0 0 Q 12.5 12.5 25 25 Q 12.5 37.5 0 50" fill="none" stroke="#fbbf24" stroke-width="0.6" stroke-opacity="0.1" />
+      <path d="M 50 0 Q 37.5 12.5 25 25 Q 37.5 37.5 50 50" fill="none" stroke="#fbbf24" stroke-width="0.6" stroke-opacity="0.1" />
+      <circle cx="25" cy="25" r="3.5" fill="#f472b6" fill-opacity="0.15" />
+      <circle cx="0" cy="0" r="2.5" fill="#fbbf24" fill-opacity="0.12" />
+      <circle cx="50" cy="0" r="2.5" fill="#fbbf24" fill-opacity="0.12" />
+      <circle cx="0" cy="50" r="2.5" fill="#fbbf24" fill-opacity="0.12" />
+      <circle cx="50" cy="50" r="2.5" fill="#fbbf24" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Filter Shadows -->
+    <filter id="phoneShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#db2777" flood-opacity="0.3" />
+    </filter>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+
+  <!-- Ambient Glowing Orbs -->
+  <rect width="800" height="450" fill="url(#pinkGlow)" />
+  <rect width="800" height="450" fill="url(#androidGlow)" />
+  <rect width="800" height="450" fill="url(#goldGlow)" />
+
+  <!-- Batik Kawung Pattern Overlay -->
+  <rect width="800" height="450" fill="url(#batikKawung)" />
+
+  <!-- Elegant Decorative Curved Wave Lines -->
+  <path d="M -50 380 Q 200 320 450 420 T 850 360" fill="none" stroke="#ec4899" stroke-width="1.2" stroke-opacity="0.25" />
+  <path d="M -50 410 Q 220 350 480 440 T 850 400" fill="none" stroke="#3ddc84" stroke-width="1" stroke-opacity="0.2" />
+
+  <!-- ================= LEFT: ANDROID DEVICE MOCKUP ================= -->
+  <g transform="translate(62, 38)" filter="url(#phoneShadow)">
+    <!-- Outer Device Frame -->
+    <rect x="0" y="0" width="224" height="374" rx="34" fill="#0c0208" stroke="url(#phoneBorder)" stroke-width="2.5" />
+    
+    <!-- Phone Screen Area -->
+    <rect x="7" y="7" width="210" height="360" rx="28" fill="url(#phoneScreenBg)" />
+
+    <!-- Dynamic Island / Speaker Notch -->
+    <rect x="82" y="14" width="60" height="12" rx="6" fill="#000000" />
+    <circle cx="94" cy="20" r="3" fill="#1e1e1e" />
+    <circle cx="128" cy="20" r="2.5" fill="#3ddc84" fill-opacity="0.8" />
+
+    <!-- App Top Bar -->
+    <g transform="translate(18, 36)">
+      <!-- App Icon & Title -->
+      <rect x="0" y="0" width="22" height="22" rx="6" fill="url(#primaryGrad)" />
+      <path d="M 6 11 L 11 6 L 16 11 L 11 16 Z" fill="#ffffff" />
+      <circle cx="11" cy="11" r="2" fill="#2b0a18" />
+      <text x="28" y="16" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="800" fill="#ffffff" letter-spacing="0.5">WastraIN</text>
+      <!-- Android icon badge in phone header -->
+      <g transform="translate(164, 2)">
+        <circle cx="8" cy="8" r="8" fill="#3ddc84" fill-opacity="0.2" />
+        <path d="M 5 10 L 6 7 M 11 10 L 10 7 M 5.5 8 C 5.5 6 10.5 6 10.5 8 Z" stroke="#3ddc84" stroke-width="1.2" stroke-linecap="round" fill="none" />
+      </g>
+    </g>
+
+    <!-- Camera / Viewfinder Box -->
+    <g transform="translate(18, 68)">
+      <rect x="0" y="0" width="188" height="136" rx="14" fill="#14040e" stroke="rgba(244,114,182,0.3)" stroke-width="1" />
+      
+      <!-- Batik Pattern Inside Viewfinder -->
+      <g opacity="0.6">
+        <circle cx="48" cy="48" r="24" fill="none" stroke="#fbbf24" stroke-width="1" />
+        <circle cx="94" cy="48" r="24" fill="none" stroke="#fbbf24" stroke-width="1" />
+        <circle cx="140" cy="48" r="24" fill="none" stroke="#fbbf24" stroke-width="1" />
+        <circle cx="71" cy="88" r="24" fill="none" stroke="#f472b6" stroke-width="1" />
+        <circle cx="117" cy="88" r="24" fill="none" stroke="#f472b6" stroke-width="1" />
+        <path d="M 20 20 L 168 116 M 168 20 L 20 116" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      </g>
+
+      <!-- Grad-CAM Heatmap Visualization Overlay -->
+      <ellipse cx="100" cy="68" rx="55" ry="42" fill="url(#heatGrad)" opacity="0.55" filter="url(#glowEffect)" />
+      <circle cx="95" cy="65" r="18" fill="#ef4444" opacity="0.75" />
+
+      <!-- AI Viewfinder Scanner Reticle Corners -->
+      <path d="M 8 18 L 8 8 L 18 8" stroke="#3ddc84" stroke-width="2" fill="none" stroke-linecap="round" />
+      <path d="M 180 18 L 180 8 L 170 8" stroke="#3ddc84" stroke-width="2" fill="none" stroke-linecap="round" />
+      <path d="M 8 118 L 8 128 L 18 128" stroke="#3ddc84" stroke-width="2" fill="none" stroke-linecap="round" />
+      <path d="M 180 118 L 180 128 L 170 128" stroke="#3ddc84" stroke-width="2" fill="none" stroke-linecap="round" />
+
+      <!-- Scan Beam -->
+      <line x1="12" y1="68" x2="176" y2="68" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.9" />
+
+      <!-- AI Live Badge -->
+      <rect x="10" y="10" width="62" height="16" rx="8" fill="rgba(0,0,0,0.65)" stroke="rgba(61,220,132,0.5)" stroke-width="0.8" />
+      <circle cx="17" cy="18" r="3" fill="#3ddc84" />
+      <text x="24" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#3ddc84">LIVE TFLite</text>
+
+      <!-- Grad-CAM Label -->
+      <rect x="114" y="10" width="64" height="16" rx="8" fill="rgba(0,0,0,0.65)" stroke="rgba(244,114,182,0.5)" stroke-width="0.8" />
+      <text x="122" y="21" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#f472b6">Grad-CAM XAI</text>
+    </g>
+
+    <!-- Classification Prediction Result Card -->
+    <g transform="translate(18, 214)">
+      <rect x="0" y="0" width="188" height="66" rx="12" fill="rgba(255,255,255,0.07)" stroke="rgba(219,39,119,0.35)" stroke-width="1" />
+      
+      <!-- Result Title & Badge -->
+      <text x="12" y="18" font-family="'Outfit', sans-serif" font-size="11" font-weight="800" fill="#ffffff">Motif Parang Rusak</text>
+      <rect x="130" y="8" width="48" height="14" rx="7" fill="rgba(16,185,129,0.2)" stroke="#10b981" stroke-width="0.8" />
+      <text x="136" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="800" fill="#3ddc84">98.4% Acc</text>
+
+      <!-- Origin & Description -->
+      <text x="12" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#f9a8d4">Asal: D.I. Yogyakarta • Filosofi Satria</text>
+
+      <!-- Confidence Bar -->
+      <rect x="12" y="44" width="164" height="5" rx="2.5" fill="rgba(255,255,255,0.12)" />
+      <rect x="12" y="44" width="158" height="5" rx="2.5" fill="url(#primaryGrad)" />
+      <text x="12" y="59" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#9ca3af">Inferensi: 38ms (EfficientNetV2-B0)</text>
+    </g>
+
+    <!-- Palet Wastra Color Palette Extraction Bar -->
+    <g transform="translate(18, 290)">
+      <rect x="0" y="0" width="188" height="42" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="0.8" />
+      <text x="10" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#fbcfe8" letter-spacing="0.3">PALET WASTRA (EKSTRAKSI WARNA)</text>
+      
+      <!-- Palette Swatches -->
+      <circle cx="22" cy="27" r="8" fill="#1e1b4b" stroke="#ffffff" stroke-width="1" />
+      <circle cx="46" cy="27" r="8" fill="#78350f" stroke="#ffffff" stroke-width="1" />
+      <circle cx="70" cy="27" r="8" fill="#b45309" stroke="#ffffff" stroke-width="1" />
+      <circle cx="94" cy="27" r="8" fill="#d97706" stroke="#ffffff" stroke-width="1" />
+      <circle cx="118" cy="27" r="8" fill="#be185d" stroke="#ffffff" stroke-width="1" />
+      <circle cx="142" cy="27" r="8" fill="#fef08a" stroke="#ffffff" stroke-width="1" />
+      <text x="158" y="30" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#3ddc84">6 Hex</text>
+    </g>
+
+    <!-- Home Indicator Bar -->
+    <rect x="76" y="348" width="72" height="4" rx="2" fill="rgba(255,255,255,0.4)" />
+  </g>
+
+  <!-- ================= RIGHT: HERO INFORMATION & BRANDING ================= -->
+  <g transform="translate(325, 42)">
+    
+    <!-- Top Super Badge: Android + AI Hybrid -->
+    <g>
+      <rect x="0" y="0" width="310" height="28" rx="14" fill="rgba(219,39,119,0.18)" stroke="rgba(244,114,182,0.4)" stroke-width="1" />
+      
+      <!-- Android Vector Icon in Pill -->
+      <g transform="translate(10, 6)">
+        <path d="M 4 10 L 5.5 6.5 M 10.5 10 L 9 6.5 M 4 7 C 4 4.5 10.5 4.5 10.5 7 Z" stroke="#3ddc84" stroke-width="1.3" stroke-linecap="round" fill="none" />
+        <circle cx="6" cy="6.2" r="0.6" fill="#3ddc84" />
+        <circle cx="8.5" cy="6.2" r="0.6" fill="#3ddc84" />
+      </g>
+      <text x="28" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#3ddc84" letter-spacing="0.8">ANDROID</text>
+      <circle cx="86" cy="14" r="2.5" fill="#f472b6" />
+      <!-- AI Icon / Brain Sparkle -->
+      <text x="96" y="18" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="800" fill="#f472b6" letter-spacing="0.8">ON-DEVICE ARTIFICIAL INTELLIGENCE</text>
+    </g>
+
+    <!-- Main Project Title -->
+    <g transform="translate(0, 42)">
+      <text x="0" y="44" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="-0.5">Wastra<tspan fill="#f472b6">IN</tspan></text>
+      <rect x="180" y="16" width="94" height="22" rx="11" fill="url(#primaryGrad)" />
+      <text x="190" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#ffffff" letter-spacing="0.5">AI BATIK APP</text>
+    </g>
+
+    <!-- Subtitle / Tagline -->
+    <text x="0" y="112" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="700" fill="#fce7f3" letter-spacing="0.2">AI Batik Classification &amp; Heritage Vision</text>
+    <text x="0" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#d1d5db">Klasifikasi motif batik Indonesia secara real-time dengan Deep Learning</text>
+
+    <!-- Divider Line -->
+    <line x1="0" y1="148" x2="420" y2="148" stroke="rgba(244,114,182,0.25)" stroke-width="1" />
+
+    <!-- 4 Core Features Box Grid -->
+    <g transform="translate(0, 162)">
+      <!-- Feature 1: Klasifikasi Motif Batik -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="202" height="42" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(244,114,182,0.22)" stroke-width="1" />
+        <circle cx="20" cy="21" r="11" fill="rgba(219,39,119,0.25)" />
+        <path d="M 15 21 L 18 24 L 25 17" stroke="#3ddc84" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="38" y="19" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#ffffff">Klasifikasi Motif Batik</text>
+        <text x="38" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#9ca3af">Akurasi tinggi &amp; offline</text>
+      </g>
+
+      <!-- Feature 2: Jejak AI (Grad-CAM) -->
+      <g transform="translate(214, 0)">
+        <rect x="0" y="0" width="202" height="42" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(244,114,182,0.22)" stroke-width="1" />
+        <circle cx="20" cy="21" r="11" fill="rgba(219,39,119,0.25)" />
+        <circle cx="20" cy="21" r="5" fill="#f472b6" />
+        <circle cx="20" cy="21" r="2" fill="#ffffff" />
+        <text x="38" y="19" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#ffffff">Jejak AI (Grad-CAM)</text>
+        <text x="38" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#9ca3af">Visualisasi heatmap XAI</text>
+      </g>
+
+      <!-- Feature 3: Palet Wastra -->
+      <g transform="translate(0, 50)">
+        <rect x="0" y="0" width="202" height="42" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(244,114,182,0.22)" stroke-width="1" />
+        <circle cx="20" cy="21" r="11" fill="rgba(219,39,119,0.25)" />
+        <path d="M 15 25 C 15 18 25 18 25 25 C 25 27 23 29 20 29 C 17 29 15 27 15 25 Z" fill="#fbbf24" />
+        <text x="38" y="19" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#ffffff">Palet Wastra</text>
+        <text x="38" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#9ca3af">Ekstraksi warna dominan</text>
+      </g>
+
+      <!-- Feature 4: Laboratorium AI -->
+      <g transform="translate(214, 50)">
+        <rect x="0" y="0" width="202" height="42" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(244,114,182,0.22)" stroke-width="1" />
+        <circle cx="20" cy="21" r="11" fill="rgba(219,39,119,0.25)" />
+        <path d="M 17 15 L 23 15 M 20 15 L 20 22 L 24 27 L 16 27 Z" stroke="#3ddc84" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="38" y="19" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="800" fill="#ffffff">Laboratorium AI</text>
+        <text x="38" y="31" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#9ca3af">Komparasi dual model</text>
+      </g>
+    </g>
+
+    <!-- Tech Stack Pill Badges Footer -->
+    <g transform="translate(0, 274)">
+      <text x="0" y="11" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#f472b6" letter-spacing="0.8">CORE TECH STACK:</text>
+      
+      <g transform="translate(0, 18)">
+        <!-- Kotlin -->
+        <rect x="0" y="0" width="62" height="22" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8" />
+        <text x="12" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#ffffff">Kotlin</text>
+
+        <!-- Android Studio -->
+        <rect x="68" y="0" width="102" height="22" rx="6" fill="rgba(61,220,132,0.12)" stroke="rgba(61,220,132,0.3)" stroke-width="0.8" />
+        <text x="76" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#3ddc84">Android Studio</text>
+
+        <!-- TensorFlow Lite -->
+        <rect x="176" y="0" width="106" height="22" rx="6" fill="rgba(245,158,11,0.12)" stroke="rgba(245,158,11,0.3)" stroke-width="0.8" />
+        <text x="184" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#fbbf24">TensorFlow Lite</text>
+
+        <!-- Dual Models -->
+        <rect x="288" y="0" width="128" height="22" rx="6" fill="rgba(236,72,153,0.12)" stroke="rgba(236,72,153,0.3)" stroke-width="0.8" />
+        <text x="296" y="15" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#f472b6">EfficientNet &amp; MobileNet</text>
+      </g>
+    </g>
+
+    <!-- APK Download Hint Subtext -->
+    <g transform="translate(0, 332)">
+      <rect x="0" y="0" width="416" height="26" rx="8" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.3)" stroke-width="0.8" />
+      <path d="M 12 13 L 15 16 L 21 10" stroke="#3ddc84" stroke-width="1.6" stroke-linecap="round" fill="none" />
+      <text x="28" y="17" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" fill="#3ddc84">Download APK via GitHub Releases (Assets / app-debug.apk)</text>
+    </g>
+
+  </g>
+</svg>
